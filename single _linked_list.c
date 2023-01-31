@@ -25,6 +25,7 @@ node *head = NULL,*last = NULL;
 void printing_linked_list ();
 void creating_linked_list();
 void insert_at_last(int val);
+void insert_at_first(int val);
 
 int main ()
 {
@@ -36,6 +37,12 @@ int main ()
     
     creating_linked_list ();
     printing_linked_list ();
+    
+     //Insert value at first position to existing Linked List
+    printf("\nInsert new item at first\n");
+    scanf("%d", &val);
+    insert_at_first(val);
+    printing_linked_list();
     
      //Insert value at last position to existing Linked List
     printf("\nInsert new item at last\n");
@@ -123,3 +130,17 @@ void insert_at_last(int val)
     }
 
 }
+void insert_at_first(int val)
+{
+    node *tmp;
+    
+    //Allocate memory . 
+    tmp = (node*)malloc(sizeof(node));
+    //Assign value .
+    tmp->num = val;
+    //Connect nodes .
+    tmp->next = head;
+    
+    head = tmp;
+    
+
