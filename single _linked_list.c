@@ -24,15 +24,25 @@ node *head = NULL,*last = NULL;
 //function prototype .
 void printing_linked_list ();
 void creating_linked_list();
+void insert_at_last(int val);
 
 int main ()
 {
+    
+    int val;
   
     //Creating linked list .
     printf ("\nCreate linked list .\n");
     
     creating_linked_list ();
     printing_linked_list ();
+    
+     //Insert value at last position to existing Linked List
+    printf("\nInsert new item at last\n");
+    scanf("%d", &val);
+    
+    insert_at_last(val);
+    printing_linked_list();
     
     
     return (0);
@@ -90,4 +100,26 @@ void printing_linked_list (node *d)
         d = d->next;
     }
     printf("\n");
+}
+
+void insert_at_last(int val)
+{
+    node *tmp;
+    tmp = (node *) malloc(sizeof(node));
+
+    tmp->num=val;
+    tmp->next=NULL;
+
+    //For the 1st element
+    if(head==NULL)
+    {
+        head=tmp;
+        last=tmp;
+    }
+    else
+    {
+        last->next=tmp;
+        last=tmp;
+    }
+
 }
