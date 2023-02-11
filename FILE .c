@@ -5,7 +5,7 @@
 #include <string.h>
 #include <errno.h>
 #include <stdlib.h>
-
+//here
 #define EI_NIDENT 16
 #define ELFCLASSNONE 0
 #define ELFCLASS32 1
