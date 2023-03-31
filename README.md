@@ -4,7 +4,7 @@ A linked list is a linear data structure in which elements are stored in a non-c
 
 ## Implementations
 
-- [Singly Linked List](./singly-linked-list.md)
+- [Singly Linked List](https://github.com/Solomonkassa/alx-low_level_programming/tree/master/0x12-singly_linked_lists)
 - [Doubly Linked List](./doubly-linked-list.md)
 - [Circular Linked List](./circular-linked-list.md)
 
